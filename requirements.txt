@@ -1,0 +1,3 @@
+django
+-e git+http://github.com/alex/django-wsgi.git#egg=django-wsgi
+-e git+http://github.com/tkaemming/django-subdomains.git#egg=django-subdomains

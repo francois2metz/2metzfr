@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+	<title>2metz Network</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<style type="text/css">
+<!--
+body {
+	margin:0;	
+}
+p#network {
+	font-size: 1.4em;
+	margin-top: 150px;
+	padding-left: 3em;
+	border-bottom: solid 2px #0F137F;
+}
+ul {
+	border: solid 2px #0F137F;
+	-moz-border-radius: 10px;
+	position: absolute;
+	top: 110px;
+	left: 50%;
+	background-color: white;
+	padding: 35px 80px 20px;
+	list-style-type: none;
+}
+li {
+	margin-bottom: 15px;
+}
+.infos {
+        text-indent: 2em;
+}
+-->
+	</style>
+
+    </head>
+    <body>
+	<p id="network">2metz Network</p>
+	<ul id="services">
+	    <li>
+		<a href="http://webmail.2metz.fr/" rel="emails">Emails</a>
+                <div class="infos" id="infos_emails">
+                    <p>
+
+                        Obtenez une adresse email <strong>@2metz.fr</strong> !
+                    </p>
+                </div>
+	    </li>
+	    <li>
+		<a href="http://calendar.2metz.fr/" rel="calendar">Calendar</a>
+                <div class="infos" id="infos_calendar">
+
+                    <p>
+                        Synchroniser votre calendrier.
+                    </p>
+                </div>
+	    </li>
+	    <li>
+                <a href="http://openid.2metz.fr/" rel="openid">OpenID</a>
+                <div class="infos" id="infos_openid">
+                    <p>
+
+                        Authentification avec OpenId.
+                    </p>
+                </div>
+            </li>
+	    <li>
+		<a href="mailto:webmaster@2metz.fr" rel="hosting">Hosting</a>
+                <div class="infos" id="infos_hosting">
+                    <p>
+                        Héberger votre site Web.
+                    </p>
+
+                </div>
+	    </li>
+	</ul>
+        <script type="text/javascript" src="{{MEDIA_URL}}js/jquery-1.4.3.min.js"></script>
+        <script type="text/javascript">
+<!--
+$(document).ready(function () {
+   $(".infos").hide();
+   $("#services > li > a").click(function() {
+      $("#infos_"+ $(this).attr("rel")).slideToggle();
+      return false;
+   });
+   $("#services > li > a").each(function() {
+     var href = $(this).attr("href");
+     var content = $(this).text();
+     $(this).parent().find("p").append('<p><a href="'+ href +'">'+ content  +'</a></p>');
+   });
+});
+-->
+        </script>
+    </body>
+</html>
